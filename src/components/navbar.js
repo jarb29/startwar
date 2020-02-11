@@ -2,12 +2,13 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faFacebook, faTumblr, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 
 
 export default function Navbar() {
     return (
-    <div className="row">
-             <nav className="navbar col-12 navbar-expand-lg navbar-light text-center bg-light">
+    <div className="row sticky-top">
+             <nav className="navbar col-12  navbar-expand-lg navbar-light text-center bg-light">
                 <ul className="navbar-nav col-3  fixed-top">
                     <li className="nav-item active mt-0 pt-0 ">
                         <a className="nav-link" href="https://www.wikipedia.org"><FontAwesomeIcon icon={faFacebook} size = '2x' color= 'gray'/></a>
@@ -37,6 +38,22 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
+            <div className="container col-12 bg-dark">
+            <div className="row  justify-content-md-center">
+                 <ul className="nav justify-content-center col-9 text-center">
+                    <li className="nav-item col-3 m-0 p-0 border">
+                        <Link to='/character' className="nav-link active text-white" href="https://www.starwars.com/databank">Character</Link>
+                    </li>
+                    <li className="nav-item col-3 m-0 p-0 border">
+                        <Link to='/planet' className="nav-link text-white" href="https://www.starwars.com/databank">Planet</Link>
+                    </li>
+                    <li className="nav-item col-3 m-0 p-0 border">
+                        <Link to='/vehicles' className="nav-link text-white" href="https://www.starwars.com/databank">Vehicle</Link>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
     </div>
     )
 }
