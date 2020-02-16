@@ -45,10 +45,13 @@ export default function Navbar() {
                         <Link to='/character' className="nav-link active text-white" href="https://www.starwars.com/databank">Character</Link>
                     </li>
                     <li className="nav-item col-3 m-0 p-0 border">
-                        <Link to='/planet' className="nav-link text-white" href="https://www.starwars.com/databank">Planet</Link>
+                        <Link to='/planets' className="nav-link text-white" href="https://www.starwars.com/databank">Planets</Link>
                     </li>
                     <li className="nav-item col-3 m-0 p-0 border">
-                        <Link to='/vehicles' className="nav-link text-white" href="https://www.starwars.com/databank">Vehicle</Link>
+                        <Link to='/favoritos' className="nav-link text-white" href="https://www.starwars.com/databank">Favoritos</Link>
+                    </li>
+                    <li className="nav-item col-3 m-0 p-0 border">
+                        <Link to='/vehicles' className="nav-link text-white" href="https://www.starwars.com/databank">Vehicles</Link>
                     </li>
                 </ul>
             </div>

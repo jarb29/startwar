@@ -1,35 +1,33 @@
 import React, { useEffect, useContext} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import CardTwo from '../components/cardTwo';
+import CardThree from '../components/cardThree';
 import { Context }  from '../store/appContext';
 
 
 
 
 
-export default function BodyCardTwo() {
+export default function BodyCardThree() {
 
     const {store, actions} = useContext(Context);
 
   useEffect(() => {
-    actions.setPlanets();
+    actions.setVehicles();
   }, [])
 
 
     return (
         <div>
         {
-          store.planets.map((item, i) => {
-          
-             return <CardTwo key = {i} data = {item} />
+          store.vehicles.map((item, i) => {
+             
+             return <CardThree key = {i} data = {item} />
           })
         }
         </div>
     
     )
 }
-
-
 
 
 

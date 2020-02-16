@@ -1,15 +1,8 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import './card.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faThumbsUp } from '@fortawesome/free-solid-svg-icons'
-import { Context }  from '../store/appContext';
 
 
-
-
-
-export default function Card(props) {
-    const {actions} = useContext(Context);
+export default function CardFavoritosPlanet(props) {
   
     const pictures = {
         imageOne: 'https://lumiere-a.akamaihd.net/v1/images/the-last-jedi-theatrical-poster-film-page_bca06283.jpeg?region=0%2C0%2C480%2C711',
@@ -29,15 +22,14 @@ export default function Card(props) {
                     <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title">Name: {props.data.name}</h5>
-                            <p className="card-text">Heigth: {props.data.height}</p>
-                            <p className="card-text"><small className="text-muted">Birth Year: {props.data.birth_year}</small></p>
+                            <p className="card-text">Rotation period: {props.data.rotation_period}</p>
+                            <p className="card-text"><small className="text-muted">Climate: {props.data.climate}</small></p>
                         </div>
                     </div>
-                </div>
-                <div className="nav-item mt-0">
-                        <p className="nav-link" onClick={(e) => actions.favoriteItems(e, props.data.name)} ><FontAwesomeIcon icon={faThumbsUp} size = '2x'color= 'gray'/></p>
+                    
                 </div>
             </div>
+
         </div>
 
       
